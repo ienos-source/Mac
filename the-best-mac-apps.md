@@ -14,5 +14,3 @@
 |      Prepo      |  App icon 制作工具  |
 |     Go2Shell    |    在当前目录打开终端    |
 |     draw.io     |    好用的流程图绘制应用   |
-
-![](.gitbook/assets/ios-beta-install-profile-software-update.png)
