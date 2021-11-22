@@ -287,11 +287,30 @@ metaclass 是元类，存储类的方法，目的是将它与实例方法及构�
 
 ### 动态添加方法
 
-performSelector:
+performSelector: 在运行时使用，配合 respondsToSelector: 判断该对象是否响应该方法，该方法可以指定线程，但是使用时要确保 RunLoop 是否是开启状态，原理是添加一个 Timer，在 RunLoop 中执行
 
+其他: 利用 performSelector 防止多次点击的应用
+```
+cancelPreviousPerformRequestsWithTarget:
+performSelector:afterDelay:0.2s
 ```
 
+相对于 NSMethodSignature 和 NSInvocation，performSelector 只能传递一个参数
+
 ```
+{
+  NSMethodSignature alloc]initWithSelector];
+  NSInvocation alloc]initWithMethodSignature]; {
+    target
+    selector
+    setArgument:atIndex
+    invoke
+    getReturnValue
+  }
+
+}
+```
+
 
 ### 动态方法解析
 

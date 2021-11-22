@@ -1,0 +1,1044 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>TCP · ienos-source</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="ienos">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-lucario.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="udp.html" />
+    
+    
+    <link rel="prev" href="http.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../base/ios-introduction.md">
+            
+                <span>
+            
+                    
+                    iOS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../base/runtime.html">
+            
+                <a href="../base/runtime.html">
+            
+                    
+                    Runtime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../base/runloop.html">
+            
+                <a href="../base/runloop.html">
+            
+                    
+                    RunLoop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../base/KVC.html">
+            
+                <a href="../base/KVC.html">
+            
+                    
+                    KVC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../base/KVO.html">
+            
+                <a href="../base/KVO.html">
+            
+                    
+                    KVO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../base/block.html">
+            
+                <a href="../base/block.html">
+            
+                    
+                    Block
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../base/memory.html">
+            
+                <a href="../base/memory.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../base/weak.html">
+            
+                <a href="../base/weak.html">
+            
+                    
+                    weak
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../base/autorelease.html">
+            
+                <a href="../base/autorelease.html">
+            
+                    
+                    autorelease
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../base/retain-cycle.html">
+            
+                <a href="../base/retain-cycle.html">
+            
+                    
+                    循环引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../base/response-chain.html">
+            
+                <a href="../base/response-chain.html">
+            
+                    
+                    响应者链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../base/category.html">
+            
+                <a href="../base/category.html">
+            
+                    
+                    Category
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../base/association.html">
+            
+                <a href="../base/association.html">
+            
+                    
+                    Association
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../base/method-swizling.md">
+            
+                <span>
+            
+                    
+                    Method-Swizzling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../base/notification.html">
+            
+                <a href="../base/notification.html">
+            
+                    
+                    Notification
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../base/sand-box.html">
+            
+                <a href="../base/sand-box.html">
+            
+                    
+                    沙盒
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="network-introduction.html">
+            
+                <a href="network-introduction.html">
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="http.html">
+            
+                <a href="http.html">
+            
+                    
+                    HTTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="tcp.html">
+            
+                <a href="tcp.html">
+            
+                    
+                    TCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="udp.html">
+            
+                <a href="udp.html">
+            
+                    
+                    UDP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="socket.html">
+            
+                <a href="socket.html">
+            
+                    
+                    Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="dns.html">
+            
+                <a href="dns.html">
+            
+                    
+                    DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="mqtt.html">
+            
+                <a href="mqtt.html">
+            
+                    
+                    MQTT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="rtsp.html">
+            
+                <a href="rtsp.html">
+            
+                    
+                    RTSP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="arp.html">
+            
+                <a href="arp.html">
+            
+                    
+                    ARP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="jiami.html">
+            
+                <a href="jiami.html">
+            
+                    
+                    加密算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../kuozhan/kuo-zhan.html">
+            
+                <a href="../kuozhan/kuo-zhan.html">
+            
+                    
+                    扩展题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../kuozhan/app-commucation.html">
+            
+                <a href="../kuozhan/app-commucation.html">
+            
+                    
+                    进程间通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../framework/framework-introduction.html">
+            
+                <a href="../framework/framework-introduction.html">
+            
+                    
+                    架构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../framework/image-cache.html">
+            
+                <a href="../framework/image-cache.html">
+            
+                    
+                    图片缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../leetcode/leetcode.html">
+            
+                <a href="../leetcode/leetcode.html">
+            
+                    
+                    算法题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../leetcode/leetcode.html">
+            
+                <a href="../leetcode/leetcode.html">
+            
+                    
+                    栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../leetcode/leetcode.html">
+            
+                <a href="../leetcode/leetcode.html">
+            
+                    
+                    排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../leetcode/leetcode.html">
+            
+                <a href="../leetcode/leetcode.html">
+            
+                    
+                    队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../leetcode/leetcode-string.html">
+            
+                <a href="../leetcode/leetcode-string.html">
+            
+                    
+                    字符串处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../leetcode/leetcode.html">
+            
+                <a href="../leetcode/leetcode.html">
+            
+                    
+                    链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../leetcode/leetcode.html">
+            
+                <a href="../leetcode/leetcode.html">
+            
+                    
+                    动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../leetcode/leetcode.html">
+            
+                <a href="../leetcode/leetcode.html">
+            
+                    
+                    贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../leetcode/leetcode.html">
+            
+                <a href="../leetcode/leetcode.html">
+            
+                    
+                    二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../leetcode/leetcode.html">
+            
+                <a href="../leetcode/leetcode.html">
+            
+                    
+                    二分法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../vendor/vendor-introduction.html">
+            
+                <a href="../vendor/vendor-introduction.html">
+            
+                    
+                    第三方库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../vendor/SDWebImage.html">
+            
+                <a href="../vendor/SDWebImage.html">
+            
+                    
+                    SDWebImage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../vendor/AFNetworking.html">
+            
+                <a href="../vendor/AFNetworking.html">
+            
+                    
+                    AFNetworking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../vendor/ReactiveCocoa.html">
+            
+                <a href="../vendor/ReactiveCocoa.html">
+            
+                    
+                    ReactiveCocoa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../vendor/AsyncDisplayKit.html">
+            
+                <a href="../vendor/AsyncDisplayKit.html">
+            
+                    
+                    AsyncDisplayKit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../mac/mac-introduction.html">
+            
+                <a href="../mac/mac-introduction.html">
+            
+                    
+                    Mac
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../mac/the-best-mac-apps.html">
+            
+                <a href="../mac/the-best-mac-apps.html">
+            
+                    
+                    The Best Mac Apps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../mac/python-related.html">
+            
+                <a href="../mac/python-related.html">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../mac/ying-yong-sun-huai.html">
+            
+                <a href="../mac/ying-yong-sun-huai.html">
+            
+                    
+                    应用已损坏，请移除废纸篓
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../mac/add-blank-space-to-photo.html">
+            
+                <a href="../mac/add-blank-space-to-photo.html">
+            
+                    
+                    为图片添加空白区域
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >TCP</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#tcp"><b></b>TCP</a></li><ul><ul><li><span class="title-icon "></span><a href="#&#x5934;&#x90E8;&#x7ED3;&#x6784;"><b></b>&#x5934;&#x90E8;&#x7ED3;&#x6784;</a></li><li><span class="title-icon "></span><a href="#&#x4E09;&#x6B21;&#x63E1;&#x624B;"><b></b>&#x4E09;&#x6B21;&#x63E1;&#x624B;</a></li><li><span class="title-icon "></span><a href="#&#x56DB;&#x6B21;&#x6325;&#x624B;"><b></b>&#x56DB;&#x6B21;&#x6325;&#x624B;</a></li><li><span class="title-icon "></span><a href="#2msl"><b></b>2MSL</a></li><li><span class="title-icon "></span><a href="#&#x5DEE;&#x9519;&#x6821;&#x9A8C;"><b></b>&#x5DEE;&#x9519;&#x6821;&#x9A8C;</a></li><li><span class="title-icon "></span><a href="#&#x62E5;&#x585E;&#x63A7;&#x5236;"><b></b>&#x62E5;&#x585E;&#x63A7;&#x5236;</a></li><li><span class="title-icon "></span><a href="#&#x5931;&#x8D25;&#x91CD;&#x4F20;"><b></b>&#x5931;&#x8D25;&#x91CD;&#x4F20;</a></li></ul></ul></ul></div><a href="#tcp" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="tcp"><a name="tcp" class="anchor-navigation-ex-anchor" href="#tcp"><i class="fa fa-link" aria-hidden="true"></i></a>TCP</h1>
+<p>TCP (Transmission Control Protocol)&#xFF0C;&#x4F20;&#x8F93;&#x5C42;&#x63A7;&#x5236;&#x534F;&#x8BAE;</p>
+<p>TCP &#x662F;&#x9762;&#x5411;&#x8FDE;&#x63A5;&#x7684;&#x534F;&#x8BAE;&#xFF0C;&#x5728;&#x53D1;&#x9001;&#x6570;&#x636E;&#x524D;&#x5148;&#x9700;&#x8981;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x53D1;&#x9001;&#x6570;&#x636E;&#xFF1B;TCP &#x4F1A;&#x6309;&#x7167;&#x7279;&#x5B9A;&#x987A;&#x5E8F;&#x91CD;&#x65B0;&#x6392;&#x5217;&#x6570;&#x636E;&#x5305;&#xFF0C;&#x76F8;&#x5BF9;&#x4F20;&#x8F93;&#x901F;&#x5EA6;&#x8F83;&#x6162;&#xFF0C;&#x5728;&#x53D1;&#x9001;&#x4EFB;&#x4F55;&#x7528;&#x6237;&#x6570;&#x636E;&#x4E4B;&#x524D;&#xFF0C;TCP &#x9700;&#x8981;&#x4E09;&#x6B21;&#x63E1;&#x624B;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;</p>
+<h3 id="&#x5934;&#x90E8;&#x7ED3;&#x6784;"><a name="&#x5934;&#x90E8;&#x7ED3;&#x6784;" class="anchor-navigation-ex-anchor" href="#&#x5934;&#x90E8;&#x7ED3;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5934;&#x90E8;&#x7ED3;&#x6784;</h3>
+<p>20 bytes  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Source Port&#xFF08;&#x6E90;&#x7AEF;&#x53E3;&#x53F7;&#xFF09;</td>
+<td style="text-align:left">2 byte</td>
+</tr>
+<tr>
+<td style="text-align:left">Destination Port&#xFF08;&#x76EE;&#x7684;&#x7AEF;&#x53E3;&#x53F7;&#xFF09;</td>
+<td style="text-align:left">2 byte</td>
+</tr>
+<tr>
+<td style="text-align:left">Sequence Number (&#x5E8F;&#x5217;&#x53F7;)</td>
+<td style="text-align:left">4 byte</td>
+</tr>
+<tr>
+<td style="text-align:left">Acknowledge Number (if ACK set)</td>
+<td style="text-align:left">4 byte</td>
+</tr>
+<tr>
+<td style="text-align:left">Data offset</td>
+<td style="text-align:left">4 bit</td>
+</tr>
+<tr>
+<td style="text-align:left">Reserved</td>
+<td style="text-align:left">3 bit</td>
+</tr>
+<tr>
+<td style="text-align:left">NS&#x3001;CWR &#x3001;ECE &#x3001;URG&#x3001;ACK&#x3001;PSH&#x3001;RST&#x3001;SYN&#x3001;FIN</td>
+<td style="text-align:left">9 bit</td>
+</tr>
+<tr>
+<td style="text-align:left">Window Size</td>
+<td style="text-align:left">2 byte</td>
+</tr>
+<tr>
+<td style="text-align:left">CheckSum</td>
+<td style="text-align:left">2 byte</td>
+</tr>
+<tr>
+<td style="text-align:left">Urgent Pointer (if URG set)</td>
+<td style="text-align:left">2 byte</td>
+</tr>
+<tr>
+<td style="text-align:left">Options (if data offset &gt; 5, Padded at the end with &quot;0&quot; bytes if necessary)</td>
+<td style="text-align:left">rest</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x4E09;&#x6B21;&#x63E1;&#x624B;"><a name="&#x4E09;&#x6B21;&#x63E1;&#x624B;" class="anchor-navigation-ex-anchor" href="#&#x4E09;&#x6B21;&#x63E1;&#x624B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E09;&#x6B21;&#x63E1;&#x624B;</h3>
+<p>&#x9700;&#x8981;&#x786E;&#x8BA4;&#x53CC;&#x65B9;&#x90FD;&#x80FD;&#x591F;&#x901A;&#x4FE1;&#xFF1B;&#x4F60;&#x80FD;&#x6536;&#x5230;&#x6D88;&#x606F;&#x5417;&#xFF1F;&#x6211;&#x53EF;&#x4EE5;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x63A5;&#x6536;&#x5230;&#x6211;&#x7684;&#x6D88;&#x606F;&#x5417;&#xFF1F;&#x6211;&#x4E5F;&#x53EF;&#x4EE5;</p>
+<p>Server Receive Check Passsed</p>
+<ul>
+<li>Client &#x53D1;&#x9001; SYN &#x4FE1;&#x53F7;&#xFF0C;Sequence Number = x&#xFF1B;&#x7136;&#x540E;&#x5904;&#x4E8E; SYN_SENT &#x72B6;&#x6001;&#xFF0C;Server &#x6536;&#x5230;&#x540E;&#x8FDB;&#x5165; SYN_RCVD</li>
+</ul>
+<p>Client Receive And Send Check Passed</p>
+<ul>
+<li>Server &#x53D1;&#x9001; ACK + SYN &#x4FE1;&#x53F7;&#xFF0C;Acknowledge Number = x+1&#xFF0C;Sequence Number = y; Client &#x6536;&#x5230;&#x540E;&#x8FDB;&#x5165; ESTABLISHED &#x72B6;&#x6001;</li>
+</ul>
+<p>Server Receive Check Passsed</p>
+<ul>
+<li>Client &#x53D1;&#x9001; ACK &#x4FE1;&#x53F7;&#xFF0C;Acknowledge Number = y+1&#xFF0C;Server &#x6536;&#x5230;&#x540E;&#x8FDB;&#x5165; ESTABLISHED</li>
+</ul>
+<p>&#x53EF;&#x4E0D;&#x53EF;&#x4EE5;&#x53EA;&#x8BBE;&#x7F6E;&#x4E24;&#x6B21;&#x63E1;&#x624B;&#xFF1F;&#x4E0D;&#x53EF;&#x4EE5;&#xFF0C;&#x9996;&#x5148;&#x4E22;&#x5931;&#x6700;&#x540E;&#x4E00;&#x6B65;&#xFF0C;&#x4F1A;&#x9020;&#x6210;&#x5982;&#x679C; Client &#x63A5;&#x6536;&#x80FD;&#x529B;&#x7F3A;&#x5931;&#xFF0C;&#x4F46;&#x662F;&#x5374;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#x7684;&#x60C5;&#x51B5;</p>
+<h3 id="&#x56DB;&#x6B21;&#x6325;&#x624B;"><a name="&#x56DB;&#x6B21;&#x6325;&#x624B;" class="anchor-navigation-ex-anchor" href="#&#x56DB;&#x6B21;&#x6325;&#x624B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56DB;&#x6B21;&#x6325;&#x624B;</h3>
+<p>&#x9700;&#x8981;&#x786E;&#x8BA4;&#x53CC;&#x65B9;&#x90FD;&#x5DF2;&#x7ECF;&#x65AD;&#x5F00;&#x8FDE;&#x63A5;&#xFF1B;&#x6211;&#x51C6;&#x5907;&#x65AD;&#x5F00;&#x8FDE;&#x63A5;&#x4E86;&#x3002;&#x597D;&#x7684;&#xFF0C;&#x6211;&#x4E5F;&#x51C6;&#x5907;&#x65AD;&#x5F00;&#x8FDE;&#x63A5;&#x3002;&#x597D;&#x7684;</p>
+<ul>
+<li><p>Client &#x53D1;&#x9001; FIN &#x4FE1;&#x53F7;&#xFF0C;&#x7136;&#x540E;&#x5904;&#x4E8E; FIN_WAIT_1 &#x72B6;&#x6001;&#xFF0C;Server &#x6536;&#x5230;&#x540E;&#x5904;&#x4E8E; CLOSE_WAIT &#x72B6;&#x6001;&#xFF0C;&#x786E;&#x8BA4;&#x662F;&#x5426;&#x5173;&#x95ED;&#xFF0C;&#x6B64;&#x65F6; Server &#x8FD8;&#x80FD;&#x63A5;&#x6536;&#x6570;&#x636E;</p>
+</li>
+<li><p>Server &#x53D1;&#x9001; ACK &#x4FE1;&#x53F7;&#xFF0C;&#x786E;&#x8BA4;&#x5DF2;&#x7ECF;&#x53EF;&#x4EE5;&#x5173;&#x95ED;&#xFF0C;Client &#x6536;&#x5230;&#x540E;&#x5904;&#x4E8E; FIN_WAIT_2 &#x72B6;&#x6001;&#xFF0C;Server CLOSE_WAIT</p>
+</li>
+<li>Server &#x53D1;&#x9001; FIN &#x4FE1;&#x53F7;&#xFF0C;Server &#x8FDB;&#x5165; LAST_ACK &#x72B6;&#x6001;&#xFF0C;Client &#x6536;&#x5230;&#x540E;&#x8FDB;&#x5165; TIME_WAIT &#x72B6;&#x6001;</li>
+<li>Client &#x53D1;&#x9001; ACK &#x4FE1;&#x53F7;&#xFF0C;Server &#x6536;&#x5230;&#x540E;&#x5904;&#x4E8E; CLOSE &#x72B6;&#x6001;</li>
+</ul>
+<p>&#x4E3A;&#x4EC0;&#x4E48;&#x5173;&#x95ED;&#x8FDE;&#x63A5;&#x65F6;&#x4F1A;&#x6BD4;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#x591A;&#x51FA;&#x6765;&#x4E00;&#x6B65;&#xFF0C;&#x56E0;&#x4E3A; Server &#x7AEF;&#x88AB;&#x52A8;&#x5173;&#x95ED;&#x65F6;&#xFF0C;&#x6B64;&#x65F6;&#x8FD8;&#x6709;&#x53EF;&#x80FD;&#x6709;&#x6570;&#x636E;&#x6CA1;&#x6709;&#x53D1;&#x9001;&#x6210;&#x529F;&#xFF0C;&#x9700;&#x8981;&#x7B49;&#x5F85;&#x81F3;&#x53EF;&#x5173;&#x95ED;&#x72B6;&#x6001;&#xFF0C;&#x7136;&#x540E;&#x53D1;&#x9001; FIN &#x4FE1;&#x53F7;</p>
+<h3 id="2msl"><a name="2msl" class="anchor-navigation-ex-anchor" href="#2msl"><i class="fa fa-link" aria-hidden="true"></i></a>2MSL</h3>
+<p>MSL (Maximum Segment Lifetime) &#x62A5;&#x6587;&#x6BB5;&#x6700;&#x5927;&#x751F;&#x5B58;&#x65F6;&#x95F4;&#xFF0C;&#x5B83;&#x662F;&#x4EFB;&#x4F55;&#x62A5;&#x6587;&#x6BB5;&#x88AB;&#x4E22;&#x5F03;&#x524D;&#x5728;&#x7F51;&#x7EDC;&#x5185;&#x7684;&#x6700;&#x957F;&#x65F6;&#x95F4;</p>
+<p>&#x5728;&#x56DB;&#x6B21;&#x6325;&#x624B;&#x4E2D;&#xFF0C;2MSL &#x80FD;&#x591F;&#x786E;&#x4FDD;&#x8DB3;&#x591F;&#x957F;&#x7684;&#x7B49;&#x5F85;&#x65F6;&#x95F4;&#xFF0C;&#x786E;&#x4FDD;&#x5728;&#x5904;&#x7406;&#x4E0B;&#x6B21;&#x6307;&#x4EE4;&#x65F6;&#xFF0C;&#x4E0D;&#x4F1A;&#x53D7;&#x5230;&#x6765;&#x81EA;&#x4E0A;&#x6B21;&#x8FF7;&#x8DEF;&#x62A5;&#x6587;&#x7684;&#x5E72;&#x6270;</p>
+<ul>
+<li><p>TIME_WAIT&#xFF0C;Client &#x6536;&#x5230; Server &#x7684; FIN &#x4FE1;&#x53F7;&#x540E;&#xFF0C;&#x7136;&#x540E;&#x53D1;&#x9001; ACK &#x4FE1;&#x53F7;&#xFF0C;&#x8FDB;&#x5165; TIME_WAIT &#x72B6;&#x6001;&#xFF0C;TIME_WAIT &#x9700;&#x8981;&#x7B49;&#x5F85; 2MSL &#x65F6;&#x95F4;&#x3002;&#x5176;&#x4E2D;&#x4E00;&#x4E2A; MSL &#x662F; Server &#x7AEF;&#x6536;&#x5230; ACK &#x4FE1;&#x53F7;&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x53E6;&#x5916;&#x4E00;&#x4E2A; MSL &#x662F; Server &#x6CA1;&#x6709;&#x6536;&#x5230; ACK &#x4FE1;&#x53F7;&#x540E;&#x91CD;&#x65B0;&#x53D1;&#x9001; FIN &#x4FE1;&#x53F7;&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;</p>
+</li>
+<li><p>CLOSE_WAIT&#xFF0C;&#x4E0E; TIME_WAIT &#x540C;&#x7406;&#xFF0C;Server &#x7AEF;&#x6536;&#x5230; Client &#x7684; FIN &#x4FE1;&#x53F7;&#x540E;&#xFF0C;&#x8FDB;&#x5165; CLOSE_WAIT &#x72B6;&#x6001;&#xFF0C;CLOSE_WAIT &#x9700;&#x8981;&#x7B49;&#x5F85; 2MSL &#x65F6;&#x95F4;&#x3002;&#x5176;&#x4E2D;&#x4E00;&#x4E2A; MSL &#x662F; Client &#x7AEF;&#x6536;&#x5230; ACK &#x4FE1;&#x53F7;&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x53E6;&#x5916;&#x4E00;&#x4E2A; MSL &#x662F; Client &#x6CA1;&#x6709;&#x6536;&#x5230; ACK &#x4FE1;&#x53F7;&#x540E;&#x91CD;&#x65B0;&#x53D1;&#x9001; FIN &#x4FE1;&#x53F7;&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;</p>
+</li>
+</ul>
+<h3 id="&#x5DEE;&#x9519;&#x6821;&#x9A8C;"><a name="&#x5DEE;&#x9519;&#x6821;&#x9A8C;" class="anchor-navigation-ex-anchor" href="#&#x5DEE;&#x9519;&#x6821;&#x9A8C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5DEE;&#x9519;&#x6821;&#x9A8C;</h3>
+<h3 id="&#x62E5;&#x585E;&#x63A7;&#x5236;"><a name="&#x62E5;&#x585E;&#x63A7;&#x5236;" class="anchor-navigation-ex-anchor" href="#&#x62E5;&#x585E;&#x63A7;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x62E5;&#x585E;&#x63A7;&#x5236;</h3>
+<h4 id="&#x6162;&#x542F;&#x52A8;&#x3001;&#x62E5;&#x585E;&#x907F;&#x514D;"><a name="&#x6162;&#x542F;&#x52A8;&#x3001;&#x62E5;&#x585E;&#x907F;&#x514D;" class="anchor-navigation-ex-anchor" href="#&#x6162;&#x542F;&#x52A8;&#x3001;&#x62E5;&#x585E;&#x907F;&#x514D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6162;&#x542F;&#x52A8;&#x3001;&#x62E5;&#x585E;&#x907F;&#x514D;</h4>
+<p>TCP &#x53D1;&#x9001;&#x7AEF;&#x4F1A;&#x7EF4;&#x62A4;&#x4E00;&#x4E2A;&#x62E5;&#x585E;&#x7A97;&#x53E3; cwnd&#xFF0C;&#x62E5;&#x585E;&#x7A97;&#x53E3;&#x521D;&#x59CB;&#x4E3A; 1 &#x4E2A;&#x62A5;&#x6587;&#x6BB5;&#xFF0C;&#x6BCF;&#x6B21;&#x7ECF;&#x8FC7;&#x4E00;&#x6B21; RTT (&#x6570;&#x636E;&#x5B8C;&#x5168;&#x53D1;&#x9001;&#x5230;&#x786E;&#x8BA4;&#x65F6;&#x95F4;)&#xFF0C;&#x7A97;&#x53E3;&#x5927;&#x5C0F;&#x4F1A;&#x7FFB;&#x500D;&#xFF0C;&#x6307;&#x6570;&#x578B;&#x589E;&#x957F;&#x3002;&#x5F53; cwnd &#x589E;&#x957F;&#x5230;&#x9608;&#x503C; ssthresh &#x4E4B;&#x540E;&#xFF0C;&#x6BCF;&#x7ECF;&#x8FC7;&#x4E00;&#x4E2A; RTT &#x5C31;&#x628A;&#x62E5;&#x585E;&#x7A97;&#x53E3;&#x52A0;&#x4E00;&#xFF0C;&#x7EBF;&#x6027;&#x589E;&#x957F;&#x3002;&#x5F53;&#x68C0;&#x6D4B;&#x5230;&#x62E5;&#x585E;&#x540E;&#xFF0C;cwnd &#x91CD;&#x7F6E;&#x4E3A; 1 &#x4E2A;&#x62A5;&#x6587;&#x6BB5;&#xFF0C;&#x4E14; ssthresh &#x53D8;&#x6210;&#x62E5;&#x585E;&#x65F6; cwnd &#x7684;&#x4E00;&#x534A;&#xFF0C;&#x91CD;&#x65B0;&#x8D70;&#x6162;&#x542F;&#x52A8;&#x548C;&#x62E5;&#x585E;&#x907F;&#x514D;</p>
+<h4 id="&#x5FEB;&#x91CD;&#x4F20;&#x3001;&#x5FEB;&#x6062;&#x590D;"><a name="&#x5FEB;&#x91CD;&#x4F20;&#x3001;&#x5FEB;&#x6062;&#x590D;" class="anchor-navigation-ex-anchor" href="#&#x5FEB;&#x91CD;&#x4F20;&#x3001;&#x5FEB;&#x6062;&#x590D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5FEB;&#x91CD;&#x4F20;&#x3001;&#x5FEB;&#x6062;&#x590D;</h4>
+<h3 id="&#x5931;&#x8D25;&#x91CD;&#x4F20;"><a name="&#x5931;&#x8D25;&#x91CD;&#x4F20;" class="anchor-navigation-ex-anchor" href="#&#x5931;&#x8D25;&#x91CD;&#x4F20;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5931;&#x8D25;&#x91CD;&#x4F20;</h3>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; www.gitbook.com 2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2021-11-21 11:12:00
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="http.html" class="navigation navigation-prev " aria-label="Previous page: HTTP">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="udp.html" class="navigation navigation-next " aria-label="Next page: UDP">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"TCP","level":"1.3.2","depth":2,"next":{"title":"UDP","level":"1.3.3","depth":2,"path":"markdown/network/udp.md","ref":"markdown/network/udp.md","articles":[]},"previous":{"title":"HTTP","level":"1.3.1","depth":2,"path":"markdown/network/http.md","ref":"markdown/network/http.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","livereload","-sharing","search-pro","prism","prism-themes","advanced-emoji","splitter","tbfed-pagefooter","favicon","anchor-navigation-ex","popup","copy-code-button","hide-element","livereload"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © www.gitbook.com 2021","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-lucario.css"]},"livereload":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"popup":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico"},"prism-themes":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"ienos","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ienos-source","language":"zh-hans","output.name":"site","gitbook":"3.2.3","description":"mac tip"},"file":{"path":"markdown/network/tcp.md","mtime":"2021-11-21T03:12:00.068Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-22T01:01:18.246Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

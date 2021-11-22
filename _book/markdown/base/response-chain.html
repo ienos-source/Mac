@@ -1,0 +1,989 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>响应者链 · ienos-source</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="ienos">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-lucario.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="category.html" />
+    
+    
+    <link rel="prev" href="retain-cycle.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ios-introduction.md">
+            
+                <span>
+            
+                    
+                    iOS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="runtime.html">
+            
+                <a href="runtime.html">
+            
+                    
+                    Runtime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="runloop.html">
+            
+                <a href="runloop.html">
+            
+                    
+                    RunLoop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="KVC.html">
+            
+                <a href="KVC.html">
+            
+                    
+                    KVC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="KVO.html">
+            
+                <a href="KVO.html">
+            
+                    
+                    KVO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="block.html">
+            
+                <a href="block.html">
+            
+                    
+                    Block
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="memory.html">
+            
+                <a href="memory.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="weak.html">
+            
+                <a href="weak.html">
+            
+                    
+                    weak
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="autorelease.html">
+            
+                <a href="autorelease.html">
+            
+                    
+                    autorelease
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="retain-cycle.html">
+            
+                <a href="retain-cycle.html">
+            
+                    
+                    循环引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.10" data-path="response-chain.html">
+            
+                <a href="response-chain.html">
+            
+                    
+                    响应者链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="category.html">
+            
+                <a href="category.html">
+            
+                    
+                    Category
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="association.html">
+            
+                <a href="association.html">
+            
+                    
+                    Association
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="method-swizling.md">
+            
+                <span>
+            
+                    
+                    Method-Swizzling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="notification.html">
+            
+                <a href="notification.html">
+            
+                    
+                    Notification
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="sand-box.html">
+            
+                <a href="sand-box.html">
+            
+                    
+                    沙盒
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../network/network-introduction.html">
+            
+                <a href="../network/network-introduction.html">
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../network/http.html">
+            
+                <a href="../network/http.html">
+            
+                    
+                    HTTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../network/tcp.html">
+            
+                <a href="../network/tcp.html">
+            
+                    
+                    TCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../network/udp.html">
+            
+                <a href="../network/udp.html">
+            
+                    
+                    UDP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../network/socket.html">
+            
+                <a href="../network/socket.html">
+            
+                    
+                    Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../network/dns.html">
+            
+                <a href="../network/dns.html">
+            
+                    
+                    DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../network/mqtt.html">
+            
+                <a href="../network/mqtt.html">
+            
+                    
+                    MQTT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../network/rtsp.html">
+            
+                <a href="../network/rtsp.html">
+            
+                    
+                    RTSP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../network/arp.html">
+            
+                <a href="../network/arp.html">
+            
+                    
+                    ARP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../network/jiami.html">
+            
+                <a href="../network/jiami.html">
+            
+                    
+                    加密算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../kuozhan/kuo-zhan.html">
+            
+                <a href="../kuozhan/kuo-zhan.html">
+            
+                    
+                    扩展题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../kuozhan/app-commucation.html">
+            
+                <a href="../kuozhan/app-commucation.html">
+            
+                    
+                    进程间通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../framework/framework-introduction.html">
+            
+                <a href="../framework/framework-introduction.html">
+            
+                    
+                    架构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../framework/image-cache.html">
+            
+                <a href="../framework/image-cache.html">
+            
+                    
+                    图片缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../leetcode/leetcode.html">
+            
+                <a href="../leetcode/leetcode.html">
+            
+                    
+                    算法题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../leetcode/leetcode.html">
+            
+                <a href="../leetcode/leetcode.html">
+            
+                    
+                    栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../leetcode/leetcode.html">
+            
+                <a href="../leetcode/leetcode.html">
+            
+                    
+                    排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../leetcode/leetcode.html">
+            
+                <a href="../leetcode/leetcode.html">
+            
+                    
+                    队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../leetcode/leetcode-string.html">
+            
+                <a href="../leetcode/leetcode-string.html">
+            
+                    
+                    字符串处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../leetcode/leetcode.html">
+            
+                <a href="../leetcode/leetcode.html">
+            
+                    
+                    链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../leetcode/leetcode.html">
+            
+                <a href="../leetcode/leetcode.html">
+            
+                    
+                    动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../leetcode/leetcode.html">
+            
+                <a href="../leetcode/leetcode.html">
+            
+                    
+                    贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../leetcode/leetcode.html">
+            
+                <a href="../leetcode/leetcode.html">
+            
+                    
+                    二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../leetcode/leetcode.html">
+            
+                <a href="../leetcode/leetcode.html">
+            
+                    
+                    二分法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../vendor/vendor-introduction.html">
+            
+                <a href="../vendor/vendor-introduction.html">
+            
+                    
+                    第三方库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../vendor/SDWebImage.html">
+            
+                <a href="../vendor/SDWebImage.html">
+            
+                    
+                    SDWebImage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../vendor/AFNetworking.html">
+            
+                <a href="../vendor/AFNetworking.html">
+            
+                    
+                    AFNetworking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../vendor/ReactiveCocoa.html">
+            
+                <a href="../vendor/ReactiveCocoa.html">
+            
+                    
+                    ReactiveCocoa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../vendor/AsyncDisplayKit.html">
+            
+                <a href="../vendor/AsyncDisplayKit.html">
+            
+                    
+                    AsyncDisplayKit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../mac/mac-introduction.html">
+            
+                <a href="../mac/mac-introduction.html">
+            
+                    
+                    Mac
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../mac/the-best-mac-apps.html">
+            
+                <a href="../mac/the-best-mac-apps.html">
+            
+                    
+                    The Best Mac Apps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../mac/python-related.html">
+            
+                <a href="../mac/python-related.html">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../mac/ying-yong-sun-huai.html">
+            
+                <a href="../mac/ying-yong-sun-huai.html">
+            
+                    
+                    应用已损坏，请移除废纸篓
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../mac/add-blank-space-to-photo.html">
+            
+                <a href="../mac/add-blank-space-to-photo.html">
+            
+                    
+                    为图片添加空白区域
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >响应者链</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x54CD;&#x5E94;&#x8005;&#x94FE;"><b></b>&#x54CD;&#x5E94;&#x8005;&#x94FE;</a></li><ul><ul><li><span class="title-icon "></span><a href="#&#x539F;&#x7406;"><b></b>&#x539F;&#x7406;</a></li></ul></ul></ul></div><a href="#&#x54CD;&#x5E94;&#x8005;&#x94FE;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x54CD;&#x5E94;&#x8005;&#x94FE;"><a name="&#x54CD;&#x5E94;&#x8005;&#x94FE;" class="anchor-navigation-ex-anchor" href="#&#x54CD;&#x5E94;&#x8005;&#x94FE;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x54CD;&#x5E94;&#x8005;&#x94FE;</h1>
+<ul>
+<li><a href="https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/EventOverview/EventArchitecture/EventArchitecture.html#//apple_ref/doc/uid/10000060i-CH3-SW2" target="_blank">Cocoa Event Handling Guide</a></li>
+<li><a href="https://developer.apple.com/library/archive/documentation/General/Conceptual/Devpedia-CocoaApp/EventHandlingiPhone.html" target="_blank">Events (iOS)</a></li>
+<li><a href="https://developer.apple.com/documentation/uikit/touches_presses_and_gestures" target="_blank">Touches, Presses, and Gestures</a></li>
+<li><a href="https://www.jianshu.com/p/b0884faae603" target="_blank">iOS&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#xFF0C;&#x770B;&#x6211;&#x5C31;&#x591F;&#x4E86;~</a></li>
+</ul>
+<p>&#x4E0E;&#x624B;&#x673A; APP &#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x901A;&#x8FC7;&#x624B;&#x52BF;&#x3001;&#x4F20;&#x611F;&#x3001;&#x8FDC;&#x7A0B;&#x63A7;&#x5236;&#x6765;&#x548C; APP &#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#xFF1B;&#x51B3;&#x5B9A;&#x7531;&#x8C01;&#x6765;&#x54CD;&#x5E94;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#x7684;&#x673A;&#x5236;&#x88AB;&#x79F0;&#x4E3A;&#x54CD;&#x5E94;&#x8005;&#x94FE;</p>
+<p>&#x8F93;&#x5165;&#x300C;&#x4E8B;&#x4EF6;&#x300D;&#xFF0C;&#x8F93;&#x51FA;&#x300C;&#x54CD;&#x5E94;&#x8005;&#x300D;&#xFF0C;&#x7136;&#x540E;&#x6765;&#x51B3;&#x5B9A;&#x8C01;&#x6765;&#x54CD;&#x5E94;</p>
+<p><img src="../../resource/response-chain.jpeg" alt=""></p>
+<p>&#x7EE7;&#x627F; UIResponse &#x7684;&#x5BF9;&#x8C61;&#x88AB;&#x79F0;&#x4E3A;&#x54CD;&#x5E94;&#x8005;&#xFF0C;&#x9700;&#x8981;&#x51B3;&#x5B9A;&#x7531;&#x8C01;&#x6765;&#x54CD;&#x5E94;&#x8BE5;&#x4E8B;&#x4EF6;&#xFF0C;&#x79F0;&#x4E3A;&#x7B2C;&#x4E00;&#x54CD;&#x5E94;&#x8005;</p>
+<h3 id="&#x539F;&#x7406;"><a name="&#x539F;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x539F;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x539F;&#x7406;</h3>
+<p>&#x9875;&#x9762;&#x4E4B;&#x95F4;&#x5448;&#x73B0;&#x7684;&#x662F;&#x6811;&#x72B6;&#x7ED3;&#x6784;</p>
+<p><img src="../../resource/response-chain-view-tree.png" alt=""></p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x7528;&#x6237;&#x5728;&#x8FDB;&#x884C; APP &#x4EA4;&#x4E92;&#x65F6;&#xFF0C;&#x80AF;&#x5B9A;&#x6709;&#x4E00;&#x4E2A; View &#x662F;&#x6700;&#x9760;&#x8FD1;&#x7528;&#x6237;&#x7684;</p>
+<p>&#x6BD4;&#x5982;&#x8BF4;&#x6211;&#x4EEC;&#x5728;&#x6700;&#x9760;&#x8FD1; View3 &#x89E6;&#x53D1;&#x4E86;&#x4E00;&#x4E2A;&#x70B9;&#x51FB;&#x624B;&#x52BF;&#xFF0C;&#x90A3;&#x6211;&#x4EEC;&#x8981;&#x600E;&#x4E48;&#x786E;&#x8BA4;&#x662F; View3 &#x662F;&#x6211;&#x4EEC;&#x8981;&#x627E;&#x7684; View</p>
+<ul>
+<li><p>&#x7528;&#x6237;&#x89E6;&#x53D1;&#x4E8B;&#x4EF6; UIEvent</p>
+</li>
+<li><p>UIEvent &#x7531;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A; UITouch &#x7EC4;&#x6210;</p>
+</li>
+<li><p>UITouch &#x8BF4;&#x660E;&#x4E00;&#x4E2A;&#x624B;&#x6307;&#x7684;&#x53D8;&#x5316;&#x60C5;&#x51B5;&#xFF0C;UITouch &#x7ED1;&#x5B9A; UIResponse</p>
+</li>
+<li><p>&#x901A;&#x8FC7; IO.Kit &#x53D1;&#x9001;&#x4E8B;&#x4EF6;&#x5230; Window Server</p>
+</li>
+<li><p>Window Server &#x901A;&#x8FC7;&#x5C06;&#x4E8B;&#x4EF6;&#x53D1;&#x9001;&#x7ED9;&#x5408;&#x9002;&#x7684; UIApplication</p>
+</li>
+<li><p>&#x4E8B;&#x4EF6;&#x88AB;&#x5305;&#x88C5;&#x4E3A; Event Source &#x53D1;&#x9001;&#x5230; UIApplication Main Thread RunLoop</p>
+</li>
+<li><p>Event Source &#x5305;&#x542B;&#x5F88;&#x591A; UIEvent</p>
+</li>
+<li><p>&#x901A;&#x8FC7; <code>histTest:view</code> &#x548C; <code>pointInView:</code> &#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x89C6;&#x56FE;</p>
+</li>
+<li><p>&#x7136;&#x540E;&#x518D;&#x901A;&#x8FC7; Response Chain &#x54CD;&#x5E94;&#x8005;&#x94FE;&#xFF0C;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x54CD;&#x5E94;&#x8005;&#xFF1B;HitTestView -&gt; Super View -&gt; UIWindow -&gt; UIApplication -&gt; UIApplication.Delegate</p>
+</li>
+<li><p>&#x6267;&#x884C; UIResponse &#x534F;&#x8BAE;&#x65B9;&#x6CD5;</p>
+<pre class="language-"><code>/// touchesBegan:withEvent: &#x5728;&#x5F00;&#x59CB;&#x9636;&#x6BB5;&#x8C03;&#x7528;&#x89E6;&#x6478;&#x5BF9;&#x8C61;&#x3002;
+/// touchesMoved:withEvent: &#x5728;&#x79FB;&#x52A8;&#x9636;&#x6BB5;&#x8C03;&#x7528;&#x89E6;&#x6478;&#x5BF9;&#x8C61;&#x3002;
+/// touchesEnded:withEvent: &#x5728; Ended &#x9636;&#x6BB5;&#x8C03;&#x7528;&#x89E6;&#x6478;&#x5BF9;&#x8C61;&#x3002;
+/// touchesCancelled:withEvent: &#x5F53;&#x67D0;&#x4E9B;&#x5916;&#x90E8;&#x4E8B;&#x4EF6;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;&#x6765;&#x7535;&#xFF09;&#x5BFC;&#x81F4;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x53D6;&#x6D88;&#x591A;&#x70B9;&#x89E6;&#x63A7;&#x5E8F;&#x5217;&#x4E2D;&#x7684;&#x89E6;&#x6478;&#x5BF9;&#x8C61;&#x65F6;&#x8C03;&#x7528;
+</code></pre><ul>
+<li>&#x901A;&#x8FC7; Target-Action &#x627E;&#x5230;&#x5BF9;&#x8C61; Selector &#x5B9E;&#x73B0;</li>
+</ul>
+</li>
+</ul>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; www.gitbook.com 2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2021-11-21 11:12:00
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="retain-cycle.html" class="navigation navigation-prev " aria-label="Previous page: 循环引用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="category.html" class="navigation navigation-next " aria-label="Next page: Category">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"响应者链","level":"1.2.10","depth":2,"next":{"title":"Category","level":"1.2.11","depth":2,"path":"markdown/base/category.md","ref":"markdown/base/category.md","articles":[]},"previous":{"title":"循环引用","level":"1.2.9","depth":2,"path":"markdown/base/retain-cycle.md","ref":"markdown/base/retain-cycle.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","livereload","-sharing","search-pro","prism","prism-themes","advanced-emoji","splitter","tbfed-pagefooter","favicon","anchor-navigation-ex","popup","copy-code-button","hide-element","livereload"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © www.gitbook.com 2021","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-lucario.css"]},"livereload":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"popup":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico"},"prism-themes":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"ienos","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ienos-source","language":"zh-hans","output.name":"site","gitbook":"3.2.3","description":"mac tip"},"file":{"path":"markdown/base/response-chain.md","mtime":"2021-11-21T03:12:00.059Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-22T01:01:18.246Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
