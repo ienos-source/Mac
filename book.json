@@ -25,7 +25,8 @@
 		"anchor-navigation-ex",
 		"popup",
 		"copy-code-button",
-		"hide-element"
+		"hide-element",
+        "expandable-chapters-small"
 	],
 	"pluginsConfig": {
 		"theme-default": {
@@ -40,7 +41,7 @@
 		},
 		"prism": {
 			"css": [
-				"prism-themes/themes/prism-lucario.css"
+				"prism-themes/themes/prism-one-light.css"
 			]
 		},
 		"tbfed-pagefooter": {
